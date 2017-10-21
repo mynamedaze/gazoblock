@@ -1,0 +1,203 @@
+.page-header {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  @media #{$max-mobile-width} {
+    background-color: #fff;
+  }
+  @media #{$min-tablet-width} {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+.page-header__wrapper {
+  @include section-width;
+  @include paddings;
+  @media #{$max-mobile-width} {
+    padding-top: 25px;
+    padding-bottom: 30px;
+  }
+  @media #{$min-tablet-width} {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 13px;
+  }
+  @media #{$min-desktop-width} {
+    padding-top: 28px;
+    padding-bottom: 31px;
+  }
+}
+.page-header__logo-field {
+  @media #{$max-mobile-width} {
+    text-align: center;
+  }
+  @media #{$min-tablet-width} {
+    display: flex;
+    align-items: center;
+  }
+}
+.page-header__logo-img-field {
+  @media #{$max-mobile-width} {
+    max-width: 155px;
+    @include centers;
+  }
+  @media #{$min-tablet-width} {
+    max-width: 77px;
+    display: flex;
+    align-items: center;
+  }
+  @media #{$min-desktop-width} {
+    max-width: 137px;
+  }
+}
+.page-header__logo-text {
+  font-weight: 400;
+  font-family: "core-sans", "Arial", sans-serif;
+  color: $logo-color;
+  position: relative;
+  @media #{$max-mobile-width} {
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+    display: block;
+    margin-top: 8px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 0.9rem;
+    line-height: 0.9rem;
+    margin-left: 20px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+    margin-left: 35px;
+  }
+}
+.page-header__logo-text::before {
+  content: "";
+  position: absolute;
+  background-color: $logo-color;
+  @media #{$max-mobile-width} {
+    width: 68px;
+    height: 1px;
+    left: 50%;
+    top: -7px;
+    transform: translateX(-34px);
+  }
+  @media #{$min-tablet-width} {
+    width: 1px;
+    height: 20px;
+    left: -7px;
+    top: 50%;
+    transform: translateY(-10px);
+  }
+  @media #{$min-desktop-width} {
+    width: 1px;
+    height: 30px;
+    left: -14px;
+    top: 50%;
+    transform: translateY(-15px);
+  }
+}
+.page-header__phone-field {
+  @media #{$max-mobile-width} {
+    text-align: center;
+  }
+}
+.page-header__phone-quiz {
+  display: block;
+  @media #{$max-mobile-width} {
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-top: 24px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
+.page-header__phone-link {
+  font-weight: 700;
+  @media #{$max-mobile-width} {
+    font-size: 1.8rem;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
+.page-header__mail {
+  @media #{$max-mobile-width} {
+    display: none;
+  }
+  @media #{$min-tablet-width} {
+    display: none;
+  }
+  @media #{$min-desktop-width} {
+    font-family: "museo-sans", "Arial", sans-serif;
+    display: block;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+}
+.page-header__callback-btn-field {
+  @media #{$max-mobile-width} {
+    max-width: 28rem;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media #{$min-tablet-width} {
+    width: 17.6rem;
+  }
+  @media #{$min-desktop-width} {
+    width: 20.9rem;
+    margin-right: 79px;
+  }
+}
+.page-header__callback-btn {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: $btn-color;
+  font-family: "museo-sans", "Arial", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  transition: transform 0.1s ease 0s;
+  border-radius: 2px;
+  @media #{$max-mobile-width} {
+    min-height: 5.3rem;
+    border: 2px solid $btn-color;
+    font-size: 1.6rem;
+  }
+  @media #{$min-tablet-width} {
+    min-height: 2.9rem;
+    border: 1px solid $btn-color;
+    font-size: 1rem;
+  }
+  @media #{$min-desktop-width} {
+    min-height: 4.2rem;
+    border: 2px solid $btn-color;
+    font-size: 1.1rem;
+  }
+}
+.page-header__callback-btn:hover {
+  background-color: $btn-color;
+  color: #fff;
+  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.4);
+  transform: translate(-1px, -1px);
+}
+.page-header__callback-btn:active {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  transform: translate(0, 0);
+}

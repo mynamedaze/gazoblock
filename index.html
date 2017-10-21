@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <meta name="description" content="Продажа газобетонных блоков в Краснодаре" />
+  <meta name="keywords" content="газоблоки, блоки, газобетон, газобетонные" />
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="16x16" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="author" href="/humans.txt" />
+  <title>Газобетонные блоки от производителя</title>
+  <script type="text/javascript" src="/js/flexibility.js"></script>
+  <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.inputmask.bundle.js"></script>
+</head>
+
+<body>
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <div class="page-header__logo-field">
+        <div class="page-header__logo-img-field">
+          <img src="/img/logo--mobile.png" alt="ВКБлок логотип" class="page-header__logo-img">
+        </div>
+        <span class="page-header__logo-text">Газобетон автоклавного
+          <br>твердения</span>
+      </div>
+      <div class="page-header__phone-field">
+        <span class="page-header__phone-quiz">Есть вопросы? Звоните - все расскажем!</span>
+        <a href="tel:+7999" class="page-header__phone-link">+7 (495) 888 88 88</a>
+      </div>
+      <a href="mailto:email@somemail.ru" class="page-header__mail">email@somemail.ru</a>
+      <div class="page-header__callback-btn-field">
+        <button class="page-header__callback-btn">Бесплатная консультация</button>
+      </div>
+    </div>
+  </header>
+  <section class="content">
+    <h1 class="content__title">Газосиликатные блоки автоклавного твердения</h1>
+    <ul class="content__utp-list">
+      <li class="content__utp-item">
+        <span class="content__utp-text">Цены от производителя</span>
+      </li>
+      <li class="content__utp-item">
+        <span class="content__utp-text">Отгрузим в день заказа</span>
+      </li>
+    </ul>
+    <div class="content__calculator-field">
+      <article class="calculator">
+        <h1 class="calculator__metatitle  visually-hidden">Онлайн калькулятор газобетонных блоков</h1>
+        <div class="calculator__wrapper">
+          <h2 class="calculator__title">Рассчитайте примерную стоимость за 3 клика</h2>
+          <div class="progress  disable">
+            <div class="progress__container">
+              <div class="progress__bar"></div>
+            </div>
+            <span class="progress__percent" id="progress-percent">0%</span>
+          </div>
+          <article class="stage-1">
+            <span class="stage-1__cubatura-text">Введите примерный необходимый объем (м
+              <sup>3</sup>)</span>
+            <input type="number" class="stage-1__size-input  stage-1__input--cubatura" id="cubatura">
+            <span class="stage-1__sizes-text">Или введите размеры здания для примерного расчета (м)</span>
+            <ul class="stage-1__sizes-list">
+              <li class="stage-1__sizes-item">
+                <label for="width" class="stage-1__size-label  stage-1__size-label--width"></label>
+                <input type="number" id="width" class="stage-1__size-input" placeholder="Д">
+              </li>
+              <li class="stage-1__sizes-item">
+                <label for="height" class="stage-1__size-label  stage-1__size-label--height"></label>
+                <input type="number" id="height" class="stage-1__size-input" placeholder="В">
+              </li>
+              <li class="stage-1__sizes-item">
+                <label for="depth" class="stage-1__size-label  stage-1__size-label--depth"></label>
+                <input type="number" id="depth" class="stage-1__size-input" placeholder="Ш">
+              </li>
+            </ul>
+            <div class="stage-1__to-stage-2-btn-field  to-stage-btn-field">
+              <button class="stage-1__to-stage-2-btn  to-stage-btn">Перейти к шагу 2</button>
+            </div>
+          </article>
+          <article class="stage-2">
+            <span class="stage-2__choose-deliver">Выберите удобный способ доставки</span>
+            <ul class="stage-2__deliver-list">
+              <li class="stage-2__deliver-item">
+                <input type="radio" id="deliver-radio-sam" name="deliver-radio" class="stage-2__input  visually-hidden" value="Самовывоз"
+                  checked>
+                <label for="deliver-radio-sam" class="stage-2__label-img  stage-2__label-img--sam"></label>
+                <label for="deliver-radio-sam" class="stage-2__label">Самовывоз</label>
+              </li>
+              <li class="stage-2__deliver-item">
+                <input type="radio" id="deliver-radio-dostav" name="deliver-radio" class="stage-2__input  visually-hidden" value="Доставка">
+                <label for="deliver-radio-dostav" class="stage-2__label-img  stage-2__label-img--dostav"></label>
+                <label for="deliver-radio-dostav" class="stage-2__label">Доставка</label>
+              </li>
+            </ul>
+            <div class="stage-2__deliver-textarea-field  disable">
+              <textarea class="stage-2__deliver-textarea" name="deliver-comments" id="deliver-textarea" cols="30" rows="10" placeholder="Введите адрес доставки"></textarea>
+            </div>
+            <div class="stage-2__to-stage-3-btn-field  to-stage-btn-field">
+              <button class="stage-2__to-stage-3-btn  to-stage-btn">Перейти к шагу 3</button>
+              <div class="stage-2__back-field  stage-back-field">
+                <a href="#" class="stage-2__back-link  stage-back-link">Назад</a>
+              </div>
+            </div>
+          </article>
+          <article class="stage-3">
+            <span class="stage-3__title">Также интересует покупка</span>
+            <ul class="stage-3__etc-list">
+              <li class="stage-3__etc-item">
+                <input type="checkbox" id="checkbox-instrument" name="etc-checkbox" class="stage-3__input  visually-hidden">
+                <label for="checkbox-instrument" class="stage-3__label-img  stage-3__label-img--glue"></label>
+                <label for="checkbox-instrument" class="stage-3__label">Клея</label>
+              </li>
+              <li class="stage-3__etc-item">
+                <input type="checkbox" id="checkbox-glue" name="etc-checkbox" class="stage-3__input  visually-hidden">
+                <label for="checkbox-glue" class="stage-3__label-img  stage-3__label-img--saw"></label>
+                <label for="checkbox-glue" class="stage-3__label">Инструментов</label>
+              </li>
+            </ul>
+            <div class="stage-3__to-stage-4-btn-field  to-stage-btn-field">
+              <button class="stage-3__to-stage-4-btn  to-stage-btn">Перейти к шагу 4</button>
+              <div class="stage-3__back-field  stage-back-field">
+                <a href="#" class="stage-3__back-link  stage-back-link">Назад</a>
+              </div>
+            </div>
+          </article>
+          <article class="stage-4">
+            <form action="mail.php" method="post" id="last-form" name="form-last" class="stage-4__form">
+              <span class="stage-4__title">Оставьте номер телефона для получения приблизительной стоимости</span>
+              <div class="stage-4__phone-field">
+                <input type="tel" name="uphone" id="last-stage-phone" class="stage-4__phone-input">
+                <input type="number" name="ucubatura" id="last-stage-cubatura" class="visually-hidden">
+                <input type="number" name="uobjectWidth" id="last-stage-objectWidth" class="visually-hidden">
+                <input type="number" name="uobjectHeight" id="last-stage-objectHeight" class="visually-hidden">
+                <input type="number" name="uobjectDepth" id="last-stage-objectDepth" class="visually-hidden">
+                <input type="text" name="uchooseDeliver" id="last-stage-chooseDeliver" class="visually-hidden">
+                <input type="text" name="udeliverText" id="last-stage-deliverText" class="visually-hidden">
+                <input type="text" name="uinstrumentNeed" id="last-stage-instrumentNeed" class="visually-hidden">
+                <input type="text" name="uglueNeed" id="last-stage-glueNeed" class="visually-hidden">
+              </div>
+              <div class="stage-4__to-stage-5-btn-field  to-stage-btn-field">
+                <input type="submit" class="stage-4__to-stage-5-btn  to-stage-btn" name="last-submit" value="Узнать стоимость">
+                <div class="stage-4__back-field  stage-back-field">
+                  <a href="#" class="stage-4__back-link  stage-back-link">Назад</a>
+                </div>
+              </div>
+            </form>
+          </article>
+          <article class="stage-5">
+            <span class="stage-5__title">Вах красавчик, дорогой!</span>
+            <span class="stage-5__description">В ближайшее время с тобой свяжется менеджер.</span>
+          </article>
+        </div>
+      </article>
+      <div class="content__blocks-bg  content__blocks-bg--left"></div>
+      <div class="content__blocks-bg  content__blocks-bg--right"></div>
+    </div>
+  </section>
+  <footer class="page-footer">
+    <h1 class="page-footer__title  visually-hidden">Контакты ВКБлок</h1>
+    <div class="page-footer__wrapper">
+      <div class="page-footer__inner">
+        <div class="page-footer__contacts-field">
+          <a href="tel:+7" class="page-footer__phone-link">+7 (977) 136-09-45</a>
+          <a href="mailto:dff@mail.ru" class="page-footer__mail-link">fdsfds@mail.ru</a>
+        </div>
+        <div class="page-footer__callback-link-field">
+          <a href="#" class="page-footer__callback-link">Заказать обратный звонок</a>
+        </div>
+        <span class="page-footer__copyright">ВКБлок &copy; 2017</span>
+        <a href="#" class="page-footer__confid-link">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+  <article class="popup-callback">
+    <div class="popup-callback__wrapper">
+      <button class="popup-callback__close-btn"></button>
+      <h2 class="popup-callback__title">Оставьте свой номер телефона и мы перезвоним вам в течение 60 секунд!</h2>
+      <form action="mail-lite.php" method="post" id="lite-form" name="form-lite" class="popup-callback__form">
+        <input type="text" class="popup-callback__input  popup-callback__input--name"  name="uname" id="popup-name-input" placeholder="Имя">
+        <input type="tel" class="popup-callback__input  popup-callback__input--phone" name="utel" id="popup-phone-input" placeholder="Телефон (обязательно)" required>
+        <div class="popup-callback__confid-field">
+          <input type="checkbox" id="confid-checkbox" class="popup-callback__confid-checkbox" checked required>
+          <label for="confid-checkbox" class="popup-callback__confid-label">Я даю согласие на
+            <a href="#" class="popup-callback__confid-link">обработку персональных данных</a>
+          </label>
+        </div>
+        <input type="submit" class="popup-callback__submit" name="lite-submit" value="Получить консультацию">
+      </form>
+    </div>
+  </article>
+  <div class="popup-overlay"></div>
+  <script type="text/javascript" src="/js/main.js"></script>
+  <script type="text/javascript" src="/js/picturefill.min.js"></script>
+</body>
+
+</html>

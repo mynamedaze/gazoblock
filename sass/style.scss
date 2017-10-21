@@ -1,0 +1,22 @@
+@import "normalize.scss";
+
+@import "global/fonts.scss";
+
+@import "variables.scss";
+@import "mixins.scss";
+@import "scaffolding.scss";
+
+@import "blocks/page-header.scss";
+@import "blocks/content.scss";
+@import "blocks/calculator.scss";
+@import "blocks/progress.scss";
+@import "blocks/page-footer.scss";
+
+@import "blocks/stage-1.scss";
+@import "blocks/stage-2.scss";
+@import "blocks/stage-3.scss";
+@import "blocks/stage-4.scss";
+@import "blocks/stage-5.scss";
+
+@import "blocks/popup-callback.scss";
+@import "blocks/popup-overlay.scss";
