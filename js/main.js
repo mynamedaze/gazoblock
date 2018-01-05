@@ -1,5 +1,7 @@
 'use strict';
 /*отрабатываем попап заявки*/
+$(document).ready(function() {
+
 var callbackBtn = document.getElementsByClassName('page-header__callback-btn');
 
 var popupCallback = document.getElementsByClassName('popup-callback');
@@ -34,6 +36,10 @@ var stage2 = document.getElementsByClassName('stage-2');
 var stage3 = document.getElementsByClassName('stage-3');
 var stage4 = document.getElementsByClassName('stage-4');
 var stage5 = document.getElementsByClassName('stage-5');
+
+var goalTriggerTo2 = false;
+var goalTriggerTo3 = false;
+var goalTriggerTo4 = false;
 /*stage 1*/
 var toStage2Btn = document.getElementsByClassName('stage-1__to-stage-2-btn');
 
@@ -51,6 +57,27 @@ var objectDepth = '';
 $(toStage2Btn).click(function(ev) {
   ev.preventDefault();
   if (($(cubaturaInput).val() != '') || ($(objectWidthInput).val() != '' && $(objectHeightInput).val() != '' && $(objectDepthInput).val() != '')) {
+
+    if ($(objectWidthInput).val() != '' && $(objectHeightInput).val() != '' && $(objectDepthInput).val() != '') {
+      objectWidth = $(objectWidthInput).val();
+      objectHeight = $(objectHeightInput).val();
+      objectDepth = $(objectDepthInput).val();
+    }
+    if ($(cubaturaInput).val() != '') {
+      cubatura = $(cubaturaInput).val();
+    }
+    if ((goalTriggerTo2 == false) && ($(cubaturaInput).val() != '')) {
+      console.log('succcc');
+      gtag('event', 'form-to-2', { 'event_category': 'form', 'event_action': 'to-2', });
+      gtag('event', 'form-to-2--cubatura', { 'event_category': 'form', 'event_action': 'to-2--cubatura', });
+      goalTriggerTo2 = true;
+    }
+    if ((goalTriggerTo2 == false) && ($(cubaturaInput).val() == '')) {
+      gtag('event', 'form-to-2', { 'event_category': 'form', 'event_action': 'to-2', });
+      gtag('event', 'form-to-2--razmery', { 'event_category': 'form', 'event_action': 'to-2--razmery', });
+      goalTriggerTo2 = true;
+    }
+    
     $(stage1).fadeOut(500);
     setTimeout(function() {
       $(progress).removeClass('disable');
@@ -60,14 +87,7 @@ $(toStage2Btn).click(function(ev) {
         $(progressBar).animate({width: "25%"}, 100);
       }, 500);
     }, 500);
-    if ($(objectWidthInput).val() != '' && $(objectHeightInput).val() != '' && $(objectDepthInput).val() != '') {
-      objectWidth = $(objectWidthInput).val();
-      objectHeight = $(objectHeightInput).val();
-      objectDepth = $(objectDepthInput).val();
-    }
-    if ($(cubaturaInput).val() != '') {
-      cubatura = $(cubaturaInput).val();
-    }
+
     console.log('Кубатура: ' + cubatura);
     console.log('Длина: ' + objectWidth);
     console.log('Высота: ' + objectHeight);
@@ -113,6 +133,13 @@ $(backToStage1Link).click(function(ev) {
 $(toStage3Btn).click(function(ev) {
   ev.preventDefault();
   if (choosedDeliver == 'Доставка' && $(deliverTextarea).val() != '') {
+
+    if (goalTriggerTo3 == false) {
+      gtag('event', 'form-to-3', { 'event_category': 'form', 'event_action': 'to-3', });
+      gtag('event', 'form-to-3--dostav', { 'event_category': 'form', 'event_action': 'to-3--dostav', });
+      goalTriggerTo3 = true;
+    }
+
     deliverText = $(deliverTextarea).val();
     console.log(deliverText);
     $(stage2).fadeOut(500);
@@ -124,6 +151,13 @@ $(toStage3Btn).click(function(ev) {
       }, 500);
     }, 500);
   } else if (choosedDeliver == 'Самовывоз') {
+
+    if (goalTriggerTo3 == false) {
+      gtag('event', 'form-to-3', { 'event_category': 'form', 'event_action': 'to-3', });
+      gtag('event', 'form-to-3--sam', { 'event_category': 'form', 'event_action': 'to-3--sam', });
+      goalTriggerTo3 = true;
+    }
+
     deliverText = '';
     $(stage2).fadeOut(500);
     setTimeout(function() {
@@ -168,19 +202,40 @@ $(backToStage2Link).click(function(ev) {
 
 $(toStage4Btn).click(function(ev) {
   ev.preventDefault();
+
+  if ($(instrument).prop('checked')) {
+    instrumentNeed = 'Нужен инструмент!';
+  }
+  if ($(glue).prop('checked')) {
+    glueNeed = 'Нужен клей!';
+  }
+  console.log('Инструмент: ' + instrumentNeed);
+  console.log('Клей: ' + glueNeed);
+
+  if (goalTriggerTo4 == false) {
+    if ((instrumentNeed == 'Нужен инструмент!') && (glueNeed == 'Нужен клей!')) {
+      gtag('event', 'form-to-4', { 'event_category': 'form', 'event_action': 'to-4', });
+      gtag('event', 'form-to-4--inst-and-glue', { 'event_category': 'form', 'event_action': 'to-4--inst-and-glue', });
+      goalTriggerTo4 = true;
+    } else if ((instrumentNeed == 'Нужен инструмент!') && (glueNeed != 'Нужен клей!')) {
+      gtag('event', 'form-to-4', { 'event_category': 'form', 'event_action': 'to-4', });
+      gtag('event', 'form-to-4--inst', { 'event_category': 'form', 'event_action': 'to-4--inst', });
+      goalTriggerTo4 = true;
+    } else if ((instrumentNeed != 'Нужен инструмент!') && (glueNeed == 'Нужен клей!')) {
+      gtag('event', 'form-to-4', { 'event_category': 'form', 'event_action': 'to-4', });
+      gtag('event', 'form-to-4--glue', { 'event_category': 'form', 'event_action': 'to-4--glue', });
+      goalTriggerTo4 = true;
+    } else {
+      gtag('event', 'form-to-4', { 'event_category': 'form', 'event_action': 'to-4', });
+      gtag('event', 'form-to-4--no-need', { 'event_category': 'form', 'event_action': 'to-4--no-need', });
+      goalTriggerTo4 = true;
+    }
+  }
+
   $(stage3).fadeOut(500);
   setTimeout(function() {
-    if ($(instrument).prop('checked')) {
-      instrumentNeed = 'Нужен инструмент!';
-    }
-    if ($(glue).prop('checked')) {
-      glueNeed = 'Нужен клей!';
-    }
-    console.log('Инструмент: ' + instrumentNeed);
-    console.log('Клей: ' + glueNeed);
     $(stage4).fadeIn(500);
     setTimeout(function() {
-
       progressPercent.textContent = '75%';
       $(progressBar).animate({width: "75%"}, 100);
     }, 500);
@@ -235,6 +290,8 @@ frmLast.submit(function (ev) {
       url: frmLast.attr('action'),
       data: frmLast.serialize(),
       success: function (data) {
+          yaCounter46358214.reachGoal('form-last');
+          gtag('event', 'form-last', { 'event_category': 'form', 'event_action': 'last', });
             console.log('Форма успешно отправлена!');
             $(stage4).fadeOut(500);
             setTimeout(function() {
@@ -261,6 +318,8 @@ liteForm.submit(function (ev) {
       url: liteForm.attr('action'),
       data: liteForm.serialize(),
       success: function (data) {
+          yaCounter46358214.reachGoal('form-lite');
+          gtag('event', 'form-lite', { 'event_category': 'form', 'event_action': 'lite', });
           alert('Заявка отправлена!');
           $(popupNameInput).val('');
           $(popupPhoneInput).val('');
@@ -271,10 +330,20 @@ liteForm.submit(function (ev) {
   ev.preventDefault();
 });
 /* */
-/*Валидация форм*/
-$(document).ready(function(){
-  $(popupPhoneInput).inputmask("+9 (999) 999-9999"); //specifying options
+/* предупреждение о незаполненном поле с телефоном */
+var requiredPhoneText = document.getElementsByClassName('stage-4__required-phone-text');
+var stage4ToStage5Btn = document.getElementsByClassName('stage-4__to-stage-5-btn');
+
+$(stage4ToStage5Btn).click(function() {
+  if ($(lastStagePhone).val() == '') {
+    $(requiredPhoneText).show();
+  } else {
+    $(requiredPhoneText).hide();
+  }
 });
-$(document).ready(function(){
+/* */
+/*Валидация форм*/
+  $(popupPhoneInput).inputmask("+9 (999) 999-9999"); //specifying options
   $(lastStagePhone).inputmask("+9 (999) 999-9999"); //specifying options
+/* */
 });

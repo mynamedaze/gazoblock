@@ -1045,11 +1045,11 @@
                     var formLiteG = document.getElementById('lite-form');
 
                     if (e.currentTarget == formLastG) {
-                        yaCounter1.reachGoal('form_last');
+                        yaCounter46358214.reachGoal('form-last');
                         ga('send', 'event', 'form', 'last');
                     }
                     if (e.currentTarget == formLiteG) {
-                        yaCounter1.reachGoal('form_lite');
+                        yaCounter46358214.reachGoal('form-lite');
                         ga('send', 'event', 'form', 'lite');
                     }
                     undoValue !== getBuffer().join("") && $el.trigger("change"), opts.clearMaskOnLostFocus && -1 === getLastValidPosition() && el.inputmask._valueGet && el.inputmask._valueGet() === getBufferTemplate().join("") && el.inputmask._valueSet(""), 

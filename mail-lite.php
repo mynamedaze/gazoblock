@@ -15,7 +15,7 @@ $tel = trim($tel);
 //echo $firstname;
 //echo "<br>";
 //echo $telephone;
-mail("imdaze@yandex.ru", "Заявка на газобетон LITE. газобетон-краснодар.рф", "Имя:".$name."\n Телефон: ".$tel,"From: imdaze@yandex.ru \r\n");
+mail("gazobetonkrd@yandex.ru", "Заявка на газобетон LITE. газобетон-краснодар.рф", "Имя:".$name."\n Телефон: ".$tel,"From: gazobetonkrd@yandex.ru \r\n");
 
 //$post_data = array(); mobileexpress@yandex.ru
 

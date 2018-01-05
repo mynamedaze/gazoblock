@@ -2,6 +2,16 @@
 <html lang="ru">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108419864-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-108419864-1');
+  </script>
+  <!-- /Global site tag (gtag.js) - Google Analytics -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -15,6 +25,40 @@
   <script type="text/javascript" src="/js/flexibility.js"></script>
   <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/js/jquery.inputmask.bundle.js"></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function () {
+        try {
+          w.yaCounter46358214 = new Ya.Metrika({
+            id: 46358214,
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+            trackHash: true
+          });
+        } catch (e) { }
+      });
+
+      var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/46358214" style="position:absolute; left:-9999px;" alt="" />
+    </div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
@@ -29,9 +73,9 @@
       </div>
       <div class="page-header__phone-field">
         <span class="page-header__phone-quiz">Есть вопросы? Звоните - все расскажем!</span>
-        <a href="tel:+7999" class="page-header__phone-link">+7 (495) 888 88 88</a>
+        <a href="tel:+79892769196" class="page-header__phone-link">+7 (989) 276-91-96</a>
       </div>
-      <a href="mailto:email@somemail.ru" class="page-header__mail">email@somemail.ru</a>
+      <a href="mailto:gazobetonkrd@yandex.ru" class="page-header__mail">gazobetonkrd@yandex.ru</a>
       <div class="page-header__callback-btn-field">
         <button class="page-header__callback-btn">Бесплатная консультация</button>
       </div>
@@ -128,18 +172,25 @@
             </div>
           </article>
           <article class="stage-4">
-            <form action="mail.php" method="post" id="last-form" name="form-last" class="stage-4__form">
-              <span class="stage-4__title">Оставьте номер телефона для получения приблизительной стоимости</span>
+            <form action="mail.php" method="post" id="last-form" name="form-last" class="stage-4__form  this_is_my_lead_form  form_lead_stt">
+              <span class="stage-4__title">Оставьте номер телефона для получения информации о примерной стоимости</span>
               <div class="stage-4__phone-field">
-                <input type="tel" name="uphone" id="last-stage-phone" class="stage-4__phone-input">
-                <input type="number" name="ucubatura" id="last-stage-cubatura" class="visually-hidden">
-                <input type="number" name="uobjectWidth" id="last-stage-objectWidth" class="visually-hidden">
-                <input type="number" name="uobjectHeight" id="last-stage-objectHeight" class="visually-hidden">
-                <input type="number" name="uobjectDepth" id="last-stage-objectDepth" class="visually-hidden">
-                <input type="text" name="uchooseDeliver" id="last-stage-chooseDeliver" class="visually-hidden">
-                <input type="text" name="udeliverText" id="last-stage-deliverText" class="visually-hidden">
-                <input type="text" name="uinstrumentNeed" id="last-stage-instrumentNeed" class="visually-hidden">
-                <input type="text" name="uglueNeed" id="last-stage-glueNeed" class="visually-hidden">
+                <input type="tel" name="uphone" id="last-stage-phone" class="stage-4__phone-input  phone_lead_stt" required>
+                <input type="number" name="ucubatura" id="last-stage-cubatura" class="param1_lead_stt  visually-hidden">
+                <input type="number" name="uobjectWidth" id="last-stage-objectWidth" class="param2_lead_stt  visually-hidden">
+                <input type="number" name="uobjectHeight" id="last-stage-objectHeight" class="param3_lead_stt  visually-hidden">
+                <input type="number" name="uobjectDepth" id="last-stage-objectDepth" class="param4_lead_stt  visually-hidden">
+                <input type="text" name="uchooseDeliver" id="last-stage-chooseDeliver" class="param5_lead_stt  visually-hidden">
+                <input type="text" name="udeliverText" id="last-stage-deliverText" class="param6_lead_stt  visually-hidden">
+                <input type="text" name="uinstrumentNeed" id="last-stage-instrumentNeed" class="param7_lead_stt  visually-hidden">
+                <input type="text" name="uglueNeed" id="last-stage-glueNeed" class="param8_lead_stt  visually-hidden">
+                <span class="stage-4__required-phone-text">Введите номер телефона</span>
+              </div>
+              <div class="stage-4__confid-field">
+                <input type="checkbox" id="confid-checkbox" class="stage-4__confid-checkbox" checked required>
+                <label for="confid-checkbox" class="stage-4__confid-label">Я даю согласие на
+                  <a href="/confid.html" target="_blank" class="stage-4__confid-link">обработку персональных данных</a>
+                </label>
               </div>
               <div class="stage-4__to-stage-5-btn-field  to-stage-btn-field">
                 <input type="submit" class="stage-4__to-stage-5-btn  to-stage-btn" name="last-submit" value="Узнать стоимость">
@@ -150,8 +201,8 @@
             </form>
           </article>
           <article class="stage-5">
-            <span class="stage-5__title">Вах красавчик, дорогой!</span>
-            <span class="stage-5__description">В ближайшее время с тобой свяжется менеджер.</span>
+            <span class="stage-5__title">Спасибо за обращение!</span>
+            <span class="stage-5__description">Наш менеджер свяжется с Вами в ближайшее время!</span>
           </article>
         </div>
       </article>
@@ -164,14 +215,14 @@
     <div class="page-footer__wrapper">
       <div class="page-footer__inner">
         <div class="page-footer__contacts-field">
-          <a href="tel:+7" class="page-footer__phone-link">+7 (977) 136-09-45</a>
-          <a href="mailto:dff@mail.ru" class="page-footer__mail-link">fdsfds@mail.ru</a>
+          <a href="tel:+79892769196" class="page-footer__phone-link">+7 (989) 276-91-96</a>
+          <a href="mailto:gazobetonkrd@yandex.ru" class="page-footer__mail-link">gazobetonkrd@yandex.ru</a>
         </div>
         <div class="page-footer__callback-link-field">
           <a href="#" class="page-footer__callback-link">Заказать обратный звонок</a>
         </div>
         <span class="page-footer__copyright">ВКБлок &copy; 2017</span>
-        <a href="#" class="page-footer__confid-link">Политика конфиденциальности</a>
+        <a href="/confid.html" target="_blank" class="page-footer__confid-link">Политика конфиденциальности</a>
       </div>
     </div>
   </footer>
@@ -179,13 +230,14 @@
     <div class="popup-callback__wrapper">
       <button class="popup-callback__close-btn"></button>
       <h2 class="popup-callback__title">Оставьте свой номер телефона и мы перезвоним вам в течение 60 секунд!</h2>
-      <form action="mail-lite.php" method="post" id="lite-form" name="form-lite" class="popup-callback__form">
-        <input type="text" class="popup-callback__input  popup-callback__input--name"  name="uname" id="popup-name-input" placeholder="Имя">
-        <input type="tel" class="popup-callback__input  popup-callback__input--phone" name="utel" id="popup-phone-input" placeholder="Телефон (обязательно)" required>
+      <form action="mail-lite.php" method="post" id="lite-form" name="form-lite" class="popup-callback__form  this_is_my_lead_form  form_lead_stt">
+        <input type="text" class="popup-callback__input  popup-callback__input--name  name_lead_stt" name="uname" id="popup-name-input" placeholder="Имя">
+        <input type="tel" class="popup-callback__input  popup-callback__input--phone  phone_lead_stt" name="utel" id="popup-phone-input" placeholder="Телефон (обязательно)"
+          required>
         <div class="popup-callback__confid-field">
           <input type="checkbox" id="confid-checkbox" class="popup-callback__confid-checkbox" checked required>
           <label for="confid-checkbox" class="popup-callback__confid-label">Я даю согласие на
-            <a href="#" class="popup-callback__confid-link">обработку персональных данных</a>
+            <a href="/confid.html" target="_blank" class="popup-callback__confid-link">обработку персональных данных</a>
           </label>
         </div>
         <input type="submit" class="popup-callback__submit" name="lite-submit" value="Получить консультацию">
@@ -195,6 +247,14 @@
   <div class="popup-overlay"></div>
   <script type="text/javascript" src="/js/main.js"></script>
   <script type="text/javascript" src="/js/picturefill.min.js"></script>
+  <!-- CODE FOR leads-telegram.ru --> 
+  <script type="text/javascript">var telegram_leads_code = '43c56f06d72056215b56dca9d70673a1';</script> 
+  <script src="//leads-telegram.ru/js/telegram_leads.min.js"></script> 
+  <!-- END CODE FOR leads-telegram.ru -->
+  <!--callback-->
+  <link rel="stylesheet" href="https://cdn.envybox.io/widget/cbk.css">
+  <script type="text/javascript" src="https://cdn.envybox.io/widget/cbk.js?wcb_code=60908f481cdb89a9f69e52d67d62ae8d" charset="UTF-8" async></script>
+  <!--/callback-->
 </body>
 
 </html>

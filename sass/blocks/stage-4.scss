@@ -30,6 +30,7 @@
 }
 .stage-4__phone-field {
   @include centers;
+  position: relative;
   @media #{$max-mobile-width} {
     max-width: 320px;
     margin-top: 33px;
@@ -61,6 +62,21 @@
 }
 .stage-4__phone-input:focus {
   border: 1px solid $stage-btn-color;
+}
+.stage-4__required-phone-text {
+  display: none;
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  font-size: 1.2rem;
+  color: red;
+}
+.stage-4__confid-field {
+  margin-top: 30px;
+  text-align: center;
+}
+.stage-4__confid-link {
+  color: $callback-link-color;
 }
 .stage-4__to-stage-5-btn-field {
   @media #{$max-mobile-width} {

@@ -9,6 +9,7 @@
   }
   @media #{$min-desktop-width} {
     margin-top: 39px;
+    padding-bottom: 17px;
   }
 }
 .stage-2__choose-deliver {
@@ -36,10 +37,10 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 28px;
   }
   @media #{$min-desktop-width} {
-    margin-top: 41px;
+    margin-top: 38px;
   }
 }
 .stage-2__deliver-list::after {
@@ -192,10 +193,10 @@
     margin-top: 30px;
   }
   @media #{$min-tablet-width} {
-    margin-top: 13px;
+    margin-top: 15px;
   }
   @media #{$min-desktop-width} {
-    margin-top: 31px;
+    margin-top: 25px;
   }
 }
 .stage-2__deliver-textarea {
@@ -232,7 +233,7 @@
     margin-top: 33px;
   }
   @media #{$min-tablet-width} {
-    margin-top: 20px;
+    margin-top: 22px;
   }
   @media #{$min-desktop-width} {
     margin-top: 30px;

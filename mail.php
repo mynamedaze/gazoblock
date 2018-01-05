@@ -43,7 +43,7 @@ $glueNeed = trim($glueNeed);
 //echo $firstname;
 //echo "<br>";
 //echo $telephone;
-mail("imdaze@yandex.ru", "Заявка на газобетон. газобетон-краснодар.рф", "Телефон: ".$telephone."\n Кубатура: ".$cubatura."\n Длина: ".$objectWidth."\n Высота: ".$objectHeight."\n Ширина: ".$objectDepth."\n Способ доставки: ".$chooseDeliver."\n Адрес доставки: ".$deliverText."\n Инструмент: ".$instrumentNeed."\n Клей: ".$glueNeed,"From: imdaze@yandex.ru \r\n");
+mail("gazobetonkrd@yandex.ru", "Заявка на газобетон. газобетон-краснодар.рф", "Телефон: ".$telephone."\n Кубатура: ".$cubatura."\n Длина: ".$objectWidth."\n Высота: ".$objectHeight."\n Ширина: ".$objectDepth."\n Способ доставки: ".$chooseDeliver."\n Адрес доставки: ".$deliverText."\n Инструмент: ".$instrumentNeed."\n Клей: ".$glueNeed,"From: gazobetonkrd@yandex.ru \r\n");
 
 //$post_data = array(); mobileexpress@yandex.ru
 

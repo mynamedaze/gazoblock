@@ -2,6 +2,7 @@
   display: none;
   @media #{$max-mobile-width} {
     margin-top: 34px;
+    padding-bottom: 20px;
   }
   @media #{$min-tablet-width} {
     margin-top: 28px;
@@ -31,15 +32,16 @@
   position: relative;
   @media #{$max-mobile-width} {
     max-width: 235px;
+    margin-top: 32px;
   }
   @media #{$min-tablet-width} {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 18px;
   }
   @media #{$min-desktop-width} {
-    margin-top: 41px;
+    margin-top: 28px;
   }
 }
 .stage-3__etc-item:first-child {
@@ -57,8 +59,8 @@
   flex-wrap: wrap;
   align-items: center;
   @media #{$max-mobile-width} {
-    margin-top: 16px;
-    margin-bottom: 24px;
+    margin-top: 0px;
+    margin-bottom: 15px;
   }
   @media #{$min-tablet-width} {
     width: 140px;
@@ -177,4 +179,23 @@
 #checkbox-glue:checked ~ .stage-3__label::after,
 #checkbox-instrument:checked ~ .stage-3__label::after {
   background-image: url("/img/check.svg");
+}
+.stage-3__to-stage-4-btn {
+  @media #{$max-mobile-width} {
+    margin-top: 35px;
+  }
+  @media #{$min-tablet-width} {
+    margin-top: 22px;
+  }
+  @media #{$min-desktop-width} {
+    margin-top: 35px;
+  }
+}
+.stage-3__back-field {
+  @media #{$min-tablet-width} {
+    margin-top: 22px;
+  }
+  @media #{$min-desktop-width} {
+    margin-top: 35px;
+  }
 }
